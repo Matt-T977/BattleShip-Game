@@ -3,9 +3,10 @@ from player import Player
 from Ai import AI
 from ship_creator import ShipCreator
 
+
 class PlayerCreator:
-    def __init__(self, name):
-        self.name = name
+    def __init__(self):
+        self.name = ""
         self.fleet = []
         self.ship_creator = ShipCreator()
 
