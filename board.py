@@ -7,6 +7,7 @@ class Board:
         self.board_array = []
         self.rows = 20
         self.columns = 20
+        self.column_letters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T"]
 
 
     def create_board(self):
@@ -18,5 +19,15 @@ class Board:
 
     def print_board(self):
         self.create_board()
+        letter_list = "    "
+        i = 0
+        for letters in self.column_letters:
+            letter_list += letters + "  "
+        print(letter_list)
         for rows in self.board_array:
-            print(rows)
+            i += 1
+            if i < 10:
+                i = str(i)
+                i = "0" + i
+            print(i, rows)
+            i = int(i)

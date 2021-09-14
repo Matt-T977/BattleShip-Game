@@ -6,4 +6,5 @@ class Battleship(ShipCreator):
     def __init__(self):
         super().__init__()
         self.name = "Battleship"
+        self.marker = "B"
         self.health = 4

@@ -6,4 +6,5 @@ class AircraftCarrier(ShipCreator):
     def __init__(self):
         super().__init__()
         self.name = "Aircraft Carrier"
+        self.marker = "C"
         self.health = 5

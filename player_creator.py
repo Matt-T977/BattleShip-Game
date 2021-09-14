@@ -2,6 +2,7 @@
 from player import Player
 from Ai import AI
 from ship_creator import ShipCreator
+from board import Board
 
 
 class PlayerCreator:
@@ -10,6 +11,9 @@ class PlayerCreator:
         self.players = []
         self.fleet = []
         self.ship_creator = ShipCreator()
+        self.board_creator = Board()
+        self.hit_tracker_board = []
+        self.ship_tracker_board = []
 
 
     def create_players(self, mode):
@@ -28,6 +32,12 @@ class PlayerCreator:
         submarine = self.ship_creator.submarine_creator()
         destroyer = self.ship_creator.destroyer_creator()
         self.fleet = [battleship_one, battleship_two, carrier, submarine, destroyer]
+
+    def player_hit_tracker_board(self):
+        self.hit_tracker_board = self.board_creator.create_board
+
+    def player_ship_tracker_board(self):
+        self.ship_tracker_board = self.board_creator.create_board
 
     def attack_position(self):
         pass
