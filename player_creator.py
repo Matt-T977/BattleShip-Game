@@ -7,9 +7,19 @@ from ship_creator import ShipCreator
 class PlayerCreator:
     def __init__(self):
         self.name = ""
+        self.players = []
         self.fleet = []
         self.ship_creator = ShipCreator()
 
+
+    def create_players(self, mode):
+        if mode == "2":
+            player_one = Player("Player One")
+            player_two = Player("Player Two")
+        elif mode == "1":
+            player_one = Player("Player One")
+            player_two = AI("AI")
+        self.players = [player_one, player_two]    
 
     def fleet_creator(self):
         battleship_one = self.ship_creator.battleship_creator()
