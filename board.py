@@ -18,7 +18,6 @@ class Board:
             self.board_array.append(column_array)
 
     def print_board(self):
-        self.create_board()
         letter_list = "    "
         i = 0
         for letters in self.column_letters:

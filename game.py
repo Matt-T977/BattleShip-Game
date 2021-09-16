@@ -8,8 +8,14 @@ class RunGame:
         self.creator = PlayerCreator()
 
     def run_game(self):
-        self.game_mode()
-        self.player_creation()
+        play_again = True
+        while play_again:
+            self.game_mode()
+            self.player_creation()
+            self.ship_placement()
+            while self.game_continue:
+                self.player_turn()
+        play_again = input("Do you wish to play again? Yes or No: ")        
 
     def game_mode(self):
         self.mode = input("Which game mode would you like to player?\n1: Single Player 2: Multiplayer\n ")
@@ -24,10 +30,16 @@ class RunGame:
 
 
     def ship_placement(self):
-        pass
+        for player in self.creator.players:
+            ships_placed = 0
+            while ships_placed > 5:
+                player.ship_tracker_board.print_board()
+                player.place_ship()
+                ships_placed += 1
 
     def player_turn(self, player):
-        pass
-
+        for player in self.creator.players:
+            player.attack_position
+            self.win_condition_check()
     def win_condition_check(self):
         pass

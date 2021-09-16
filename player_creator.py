@@ -3,6 +3,7 @@ from player import Player
 from Ai import AI
 from ship_creator import ShipCreator
 from board import Board
+import user_interface
 
 
 class PlayerCreator:
@@ -40,7 +41,8 @@ class PlayerCreator:
         self.ship_tracker_board = self.board_creator.create_board
 
     def attack_position(self):
-        pass
+        attack_grid = user_interface.position_input_format()
+        
 
     def place_ship(self):
         pass    

@@ -1,5 +1,6 @@
 ###Starts the Game
-from board import Board
+import game
 
-test = Board()
-test.print_board()
+
+play_battleship = game.RunGame()
+play_battleship.run_game()
