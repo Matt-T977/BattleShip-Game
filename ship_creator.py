@@ -7,19 +7,17 @@ from destroyer import Destroyer
 
 class ShipCreator:
     def __init__(self):
-        self.health = 0
-        self.grid_location = []
-        self.destroyed = False
+        pass
 
 
     def battleship_creator(self):
-        Battleship()
+        return Battleship()
 
     def carrier_creator(self):
-        AircraftCarrier()
+        return AircraftCarrier()
 
     def submarine_creator(self):
-        Submarine()
+        return Submarine()
 
     def destroyer_creator(self):
-        Destroyer()
+        return Destroyer()

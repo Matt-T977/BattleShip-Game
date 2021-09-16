@@ -1,9 +1,9 @@
-import player_creator
+import asset_creator
 
 
 class UserInterface:
     def __init__(self) -> None:
-        self.board = Board()
+        pass
 
 
     def position_input_format(self):
@@ -14,7 +14,7 @@ class UserInterface:
             position_input = position_input.split(" ")
             letter_input = position_input[0]
             number_input = position_input[1]
-            if letter_input in player_creator.Board.column_letters and number_input in range(20):
+            if letter_input in asset_creator.Board.column_letters and number_input in range(20):
                 position_list.append(letter_input)
                 position_list.append(number_input)
                 return position_list

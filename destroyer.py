@@ -1,8 +1,8 @@
 ##Destroyer character sheet
-from ship_creator import ShipCreator
+from ship_main import ShipMain
 
 
-class Destroyer(ShipCreator):
+class Destroyer(ShipMain):
     def __init__(self):
         super().__init__()
         self.name = "Destroyer"

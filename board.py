@@ -2,13 +2,15 @@
 # import numpy as np
 
 class Board:
-    def __init__(self):
+    def __init__(self, name):
         # self.battlefield_array = np.array([[0, 1, 2, 3, 4, 5],["A", "B", "C", "D", "E", "F"]])
+        self.name = name
         self.board_array = []
         self.rows = 20
         self.columns = 20
         self.column_letters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T"]
-
+        self.create_board()
+        
 
     def create_board(self):
         for rows in range(self.rows):

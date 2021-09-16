@@ -1,8 +1,8 @@
 ##Submarine character sheet
-from ship_creator import ShipCreator
+from ship_main import ShipMain
 
 
-class Submarine(ShipCreator):
+class Submarine(ShipMain):
     def __init__(self):
         super().__init__()
         self.name = "Submarine"

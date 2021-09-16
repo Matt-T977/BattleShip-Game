@@ -1,10 +1,8 @@
 ###Human Player Controls
-from player_creator import PlayerCreator
+from player_main import PlayerMain
 
 
-class Player(PlayerCreator):
+class Player(PlayerMain):
     def __init__(self, name):
         super().__init__(name)
 
-    def display_remaining_ships(self):
-        pass

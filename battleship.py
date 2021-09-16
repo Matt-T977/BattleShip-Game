@@ -1,8 +1,8 @@
 ##Battleship character sheet
-from ship_creator import ShipCreator
+from ship_main import ShipMain
 
 
-class Battleship(ShipCreator):
+class Battleship(ShipMain):
     def __init__(self):
         super().__init__()
         self.name = "Battleship"
