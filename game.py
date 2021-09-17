@@ -6,6 +6,8 @@ class RunGame:
         self.round_count = 0
         self.game_continue = True
         self.creator = AssetCreator()
+        self.player_one = None
+
 
     def run_game(self):
         play_again = True
@@ -21,23 +23,18 @@ class RunGame:
         self.mode = input("Which game mode would you like to player?\n1: Single Player 2: Multiplayer\n ")
 
     def asset_creation(self):
-        self.creator.fleet_creator()
+        # self.creator.ship_creator.fleet_creator()
         self.creator.create_players(self.mode)
-        self.creator.players[0].player_hit_tracker_board()
-        self.creator.players[0].player_ship_tracker_board()
-        self.creator.players[1].player_hit_tracker_board()
-        self.creator.players[1].player_ship_tracker_board()
-
 
     def ship_placement(self):
         for player in self.creator.players:
             ships_placed = 0
-            while ships_placed > 5:
+            while ships_placed < 5:
                 player.ship_tracker_board.print_board()
                 player.place_ship()
                 ships_placed += 1
 
-    def player_turn(self, player):
+    def player_turn(self):
         for player in self.creator.players:
             player.attack_position
             self.win_condition_check()

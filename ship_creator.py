@@ -7,17 +7,15 @@ from destroyer import Destroyer
 
 class ShipCreator:
     def __init__(self):
-        pass
+        self.fleet
+        self.fleet_creator()
 
 
-    def battleship_creator(self):
-        return Battleship()
-
-    def carrier_creator(self):
-        return AircraftCarrier()
-
-    def submarine_creator(self):
-        return Submarine()
-
-    def destroyer_creator(self):
-        return Destroyer()
+    def fleet_creator(self):
+        battleship_one = Battleship()
+        battleship_two = Battleship()
+        carrier = AircraftCarrier()
+        submarine = Submarine()
+        destroyer = Destroyer()
+        self.fleet = [battleship_one, battleship_two, carrier, submarine, destroyer]
+    
