@@ -1,7 +1,8 @@
 ##AI Player Controls
-from player_main import PlayerMain
+from player import Player
 
 
-class AI(PlayerMain):
+class AI(Player):
     def __init__(self, name):
         super().__init__(name)
+        pass

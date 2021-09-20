@@ -2,13 +2,13 @@
 from player import Player
 from Ai import AI
 from ship_creator import ShipCreator
-import user_interface
 
 
-class AssetCreator:
+class PlayerCreator:
     def __init__(self):
         self.players = []
         self.ship_creator = ShipCreator()
+        pass
         
 
     def create_players(self, mode):
@@ -19,5 +19,6 @@ class AssetCreator:
             player_one = Player("Player One")
             player_two = AI("AI")    
         self.players = [player_one, player_two]
+        pass
 
     

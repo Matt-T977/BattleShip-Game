@@ -7,8 +7,9 @@ from destroyer import Destroyer
 
 class ShipCreator:
     def __init__(self):
-        self.fleet
+        self.fleet_list
         self.fleet_creator()
+        pass
 
 
     def fleet_creator(self):
@@ -18,4 +19,4 @@ class ShipCreator:
         submarine = Submarine()
         destroyer = Destroyer()
         self.fleet = [battleship_one, battleship_two, carrier, submarine, destroyer]
-    
+        pass

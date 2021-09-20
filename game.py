@@ -1,19 +1,19 @@
 ###Main Interface
-from asset_creator import AssetCreator
+from player_creator import PlayerCreator
 
 class RunGame:
     def __init__(self) -> None:
         self.round_count = 0
         self.game_continue = True
-        self.creator = AssetCreator()
-        self.player_one = None
+        self.creator = PlayerCreator()
+        # self.player_one = None
 
 
     def run_game(self):
         play_again = True
         while play_again:
             self.game_mode()
-            self.asset_creation()
+            self.player_creation()
             self.ship_placement()
             while self.game_continue:
                 self.player_turn()
@@ -22,7 +22,7 @@ class RunGame:
     def game_mode(self):
         self.mode = input("Which game mode would you like to player?\n1: Single Player 2: Multiplayer\n ")
 
-    def asset_creation(self):
+    def player_creation(self):
         # self.creator.ship_creator.fleet_creator()
         self.creator.create_players(self.mode)
 
@@ -31,7 +31,7 @@ class RunGame:
             ships_placed = 0
             while ships_placed < 5:
                 player.ship_tracker_board.print_board()
-                player.place_ship()
+                player.place_ship(ships_placed)
                 ships_placed += 1
 
     def player_turn(self):

@@ -7,4 +7,4 @@ class Destroyer(ShipMain):
         super().__init__()
         self.name = "Destroyer"
         self.marker = "D"
-        self.health = 2
+        self.health = 2        
